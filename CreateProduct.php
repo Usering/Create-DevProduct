@@ -63,18 +63,6 @@
 	    }
 	    return  curl_exec($ch);
 	}
-	function CheckIfLoggedIn($Username){
-	        $UserInfo = curl("http://www.roblox.com/mobileapi/userinfo", false, $Username);
-	 
-	        $Data = json_decode($UserInfo);
-	 
-	        if($Data){
-	                return true;
-	        }else{
-	                return false;
-	        }
-	 
-	}
 	 
 	function Login($Username, $Password){
 	        file_put_contents($Username, '');
